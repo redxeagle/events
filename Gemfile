@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'json'
 gem 'haml'
 gem 'twitter-bootstrap-rails'
+gem 'authlogic'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
