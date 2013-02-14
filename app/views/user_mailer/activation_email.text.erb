@@ -1,0 +1,16 @@
+Willkommen beim OstBlockCup, <%= @user.login %>
+
+======================================
+
+
+Du hast dich erfolgreich bei uns registriert.
+
+Bitte aktiviere deinen Account durch das Ausführen dieses Links:
+
+<%= "http://#{APP_CONFIG['hostname']}/activate/#{@activation_code}" %>
+
+Wir wünschen dir viel Erfolg bei deinen Begehungen.
+
+
+======================================
+

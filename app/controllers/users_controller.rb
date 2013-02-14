@@ -10,7 +10,7 @@ class UsersController < ApplicationController
      @user = User.new(params[:user])
      if @user.save
        flash[:notice] = "Account registered!"
-       #UserMailer.activation_email(@user, params[:user][:password]).deliver
+       UserMailer.activation_email(@user, params[:user][:password]).deliver
        redirect_back_or_default root_url
      else
        render :action => :new
@@ -34,4 +34,18 @@ class UsersController < ApplicationController
        render :action => :edit
      end
    end
+   def activate
+     @user = User.find_by_persistence_token(params[:activation_code]) || (raise Exception)
+      raise Exception if @user.active?
+
+     if @user.activate!
+       flash[:notice] = "Your account has been activated!"
+       UserSession.create(@user, false) # Log user in manually
+       UserMailer.welcome_email(@user).deliver
+       redirect_to root_url
+     else
+       render :action => :new
+     end
+
+     end
 end

@@ -50,6 +50,7 @@ Events2::Application.routes.draw do
   # just remember to delete public/index.html.
   resource :user_sessions
   resource :users
+  match '/activate/:activation_code' => 'users#activate', :as => :activate
   #root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
   root :to => 'home#index'
 
