@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :require_no_user, :only => [:new, :create]
+   before_filter :require_no_user, :only => [:new, :create]
    before_filter :require_user, :only => [:show, :edit, :update]
 
    def new
@@ -10,7 +10,8 @@ class UsersController < ApplicationController
      @user = User.new(params[:user])
      if @user.save
        flash[:notice] = "Account registered!"
-       redirect_back_or_default account_url
+       #UserMailer.activation_email(@user, params[:user][:password]).deliver
+       redirect_back_or_default root_url
      else
        render :action => :new
      end

@@ -33,12 +33,15 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "#"} Events2
+          %a.brand{:href => "#"} Boulder Events
           .container-fluid.nav-collapse
             %ul.nav
-              %li= link_to "Link1", "/path1"
-              %li= link_to "Link2", "/path2"
-              %li= link_to "Link3", "/path3"
+              %li= link_to "Anmelden", "/path3"
+              - if current_user
+                %li= link_to "ausloggen", user_sessions_url, :method => :delete
+              - else
+                %li= link_to "Login", :controller => :user_sessions, :action => :new
+                %li= link_to "Registrierung", :controller => :users, :action => :new
           / /.nav-collapse
     .container-fluid
       .row-fluid
