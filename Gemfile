@@ -13,7 +13,7 @@ end
 group :production do
   gem 'mysql'
 end
-
+gem 'mysql'
 gem 'json'
 gem 'haml'
 gem 'twitter-bootstrap-rails'
