@@ -1,4 +1,7 @@
 class Admin::EventsController < ApplicationController
+  access_control do
+        allow :admin
+  end
 
   def new
     @event = Event.new

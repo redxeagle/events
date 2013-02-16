@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130216085222) do
+ActiveRecord::Schema.define(:version => 20130216154218) do
 
   create_table "events", :force => true do |t|
     t.integer  "hall_id"
@@ -45,12 +45,27 @@ ActiveRecord::Schema.define(:version => 20130216085222) do
     t.datetime "updated_at"
   end
 
+  create_table "roles", :force => true do |t|
+    t.string   "name",              :limit => 40
+    t.string   "authorizable_type", :limit => 40
+    t.integer  "authorizable_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "second_name"
     t.string   "city"
     t.date     "birthday"
-    t.boolean  "male"
+    t.boolean  "male",                :default => false
     t.string   "login",                                  :null => false
     t.string   "email",                                  :null => false
     t.string   "crypted_password",                       :null => false
