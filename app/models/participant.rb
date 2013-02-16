@@ -1,4 +1,4 @@
-require 'FasterCSV'
+require 'faster_csv'
 
 class Participant < ActiveRecord::Base
   belongs_to :user
