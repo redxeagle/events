@@ -1,6 +1,6 @@
-require "test/unit"
+require 'test_helper'
 
-class MyTest < Test::Unit::TestCase
+class UserTest < ActiveSupport::TestCase
 
   # Called before every test method runs. Can be used
   # to set up fixture information.
@@ -15,10 +15,17 @@ class MyTest < Test::Unit::TestCase
     # Do nothing
   end
 
-  # Fake test
-  def test_fail
+   def test_new_user
+    user = User.new
+    assert !user.save
+  end
 
-    # To change this template use File | Settings | File Templates.
-    fail("Not implemented")
+  def test_find_out_error_message
+    user = User.new
+    user.email = "test@test.de"
+    user.login = "foo"
+    user.password = "abcd"
+    user.password_confirmation = "abcd"
+    assert user.save
   end
 end

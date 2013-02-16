@@ -4,8 +4,8 @@ Registrierung
   - if @user.errors.any?
     %div#error_explanation
       %h2
-        = pluralize(@user.errors.count, "error")
-        prohibited
+        = pluralize(@user.errors.count, "Fehler")
+        aufgetreten
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
@@ -17,6 +17,12 @@ Registrierung
   = f.text_field :first_name
   = f.label :Nachname
   = f.text_field :second_name
+  = f.label "männlich"
+  = f.check_box :male
+  = f.label :Geburtstag
+  = f.date_select :birthday, :start_year => 1950, :end_year => Time.now.year
+  = f.label :Stadt
+  = f.text_field :city
   = f.label :password
   = f.password_field :password
   = f.label :password_confirmation
