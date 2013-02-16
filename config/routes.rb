@@ -1,4 +1,13 @@
 Events2::Application.routes.draw do
+
+  get "participants/show"
+
+  get "participants/edit"
+
+  get "participants/create"
+
+  get "participants/new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -39,17 +48,16 @@ Events2::Application.routes.draw do
   #     end
   #   end
 
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+
+  namespace :admin do
+    resource :events
+  end
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   resource :user_sessions
   resource :users
+  resource :participants
   match '/activate/:activation_code' => 'users#activate', :as => :activate
   #root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
   root :to => 'home#index'

@@ -34,6 +34,7 @@ class UsersController < ApplicationController
        render :action => :edit
      end
    end
+
    def activate
      @user = User.find_by_persistence_token(params[:activation_code]) || (raise Exception)
       raise Exception if @user.active?
@@ -46,6 +47,5 @@ class UsersController < ApplicationController
      else
        render :action => :new
      end
-
-     end
+   end
 end
