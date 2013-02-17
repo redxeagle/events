@@ -1,13 +1,5 @@
 Events2::Application.routes.draw do
 
-  get "participants/show"
-
-  get "participants/edit"
-
-  get "participants/create"
-
-  get "participants/new"
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -51,6 +43,7 @@ Events2::Application.routes.draw do
 
   namespace :admin do
     resource :events
+    resource :news
   end
 
   # You can have the root of your site routed with "root"

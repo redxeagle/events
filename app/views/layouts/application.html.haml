@@ -4,7 +4,7 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "IE=Edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %title= content_for?(:title) ? yield(:title) : "Events2"
+    %title= content_for?(:title) ? yield(:title) : "Boulderevents.de"
     = csrf_meta_tags
     / Le HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
@@ -51,6 +51,7 @@
               - if current_user
                 - if current_user && current_user.has_role?(:admin)
                   %li= link_to "neues Event", new_admin_events_path
+                  %li= link_to "neue News", new_admin_news_path
                 %li= link_to "Anmelden", new_participants_path
           / /.well
         / /span
@@ -59,7 +60,7 @@
           = yield
       / /row
       %footer
-        %p &copy; Company 2013
+        %p &copy; Daniel Seifarth redxeag@googlemail.com 2013
     / /container
     /
       Javascripts
