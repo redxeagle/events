@@ -18,6 +18,12 @@
           border-radius: 4px;
 }
 
+.bs-docs-example a {
+    position: absolute;
+    top: -1px;
+    right: 1px;
+}
+
 /* Echo out a label for the example */
 .bs-docs-example:after {
   content: "News";

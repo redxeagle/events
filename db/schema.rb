@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130217122250) do
+ActiveRecord::Schema.define(:version => 20130217130007) do
 
   create_table "events", :force => true do |t|
     t.integer  "hall_id"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20130217122250) do
     t.integer  "user_id"
     t.string   "headline"
     t.string   "subline"
-    t.string   "news_text"
+    t.text     "news_text",  :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end

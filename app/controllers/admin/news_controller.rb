@@ -21,6 +21,17 @@ class Admin::NewsController < ApplicationController
    end
 
    def edit
+     @news = News.find_by_id(params[:id])
    end
+
+  def update
+    @news = News.find(params[:id])
+    if @news.update_attributes(params[:news])
+      flash[:notice] = "News updated!"
+      redirect_to root_url
+    else
+      render :action => :edit
+    end
+  end
 
 end

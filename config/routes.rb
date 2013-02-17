@@ -43,7 +43,7 @@ Events2::Application.routes.draw do
 
   namespace :admin do
     resource :events
-    resource :news
+    resources :news
   end
 
   # You can have the root of your site routed with "root"

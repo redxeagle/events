@@ -1,5 +1,8 @@
 - @news.each do |news|
   %div.bs-docs-example
+    - if current_user && current_user.has_role?(:admin)
+      = link_to edit_admin_news_path(:id => news.id) do
+        %i.icon-pencil
     %h2= news.headline
     %h6= news.subline
     %p= news.news_text
