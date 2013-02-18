@@ -42,7 +42,7 @@ Events2::Application.routes.draw do
 
 
   namespace :admin do
-    resource :events
+    resources :events
     resources :news
   end
 

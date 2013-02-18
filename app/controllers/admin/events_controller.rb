@@ -18,9 +18,15 @@ class Admin::EventsController < ApplicationController
    end
 
   def show
+    @events = Event.all
   end
 
   def edit
+
+  end
+
+  def index
+    @events = Event.all
   end
 
 end

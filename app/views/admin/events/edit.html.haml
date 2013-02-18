@@ -1,0 +1,30 @@
+Event editieren
+
+= form_for [:admin, @event] do |f|
+  - if @event.errors.any?
+    %div#error_explanation
+      %h2
+        = pluralize(@event.errors.count, "error")
+        prohibited
+      %ul
+        - @event.errors.full_messages.each do |msg|
+          %li= msg
+  = f.label :name
+  = f.text_field :name
+  = f.label :startzeit
+  = f.datetime_select :start_time
+  = f.label :Endzeit
+  = f.datetime_select :end_time
+  = f.label :Anmeldung
+  = f.check_box :registration
+  = f.label :Anmeldung_Start
+  = f.date_select :registration_start
+  = f.label :Anmeldung_Ende
+  = f.date_select :registration_end
+  = f.label :Teilnehmer
+  = f.text_field :maximum_participant
+  = f.label :Beschreibung
+  = f.text_area :description
+  = f.label :calculation_type
+  = f.text_field :calculation_type
+  = f.submit "Editiere dieses Event"
