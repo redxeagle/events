@@ -46,6 +46,8 @@ Events2::Application.routes.draw do
     resources :news
   end
 
+  resource :account, :controller => "users"
+
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   resource :user_sessions

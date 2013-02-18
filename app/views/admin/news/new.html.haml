@@ -1,6 +1,6 @@
 News
 
-= form_for [:admin, @news], :url => admin_news_path do |f|
+= form_for [:admin, @news] do |f|
   - if @news.errors.any?
     %div#error_explanation
       %h2

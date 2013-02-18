@@ -1,0 +1,34 @@
+%div.fieldset
+  %p
+    %b Login:
+    = h @user.login
+
+  %p
+    %b Vorname:
+    = @user.first_name
+
+  %p
+    %b Nachname:
+    = @user.second_name
+  %p
+    %b Geschlecht:
+    = @user.male? ? "männlich" : "weiblich"
+
+  %p
+    %b Geburtstag:
+    =@user.birthday
+
+  %p
+    %b Wohnort:
+    = @user.city
+
+  %p
+    %b E-Mail Adresse:
+    = @user.email
+  %p
+    %b Angemeldete Events
+    %ul
+      - @user.participants.each do |participant|
+        %li= participant.event.name
+
+  = link_to 'Edit', edit_account_path

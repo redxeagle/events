@@ -18,6 +18,7 @@ class ParticipantsController < ApplicationController
   def create
     @participant = Participant.new(params[:participant])
     @participant.user = current_user
+    @events = Event.where(:registration => true)
     if @participant.save
       flash[:notice] = "angemeldet!"
       redirect_back_or_default root_url

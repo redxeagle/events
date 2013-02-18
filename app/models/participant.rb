@@ -3,7 +3,7 @@ require 'faster_csv'
 class Participant < ActiveRecord::Base
   belongs_to :user
   belongs_to :event
-
+  validates_uniqueness_of :user_id, :scope => :event_id, :message => "Sie sind bereits für dieses Event angemeldet"
 
   def csv_line
     return [self.id.to_s,
