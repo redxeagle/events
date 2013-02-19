@@ -1,7 +1,6 @@
-%div.fieldset
-  %h1 Editiere dein Profile
-
-  = form_for @user, :url => account_path do |f|
+= form_for @user, :url => account_path do |f|
+  %fieldset
+    %legend Editiere dein Profile
     - if @user.errors.any?
       %div#error_explanation
         %h2
@@ -11,12 +10,4 @@
           - @user.errors.full_messages.each do |msg|
             %li= msg
     = render :partial => "form", :object => f
-    %br
-    = f.label :Wohnort
-    %br
-    = f.text_field :city
-    %br
-    = f.submit "Aktualisieren"
-
-  %br
-  = link_to "Mein Profile", account_path
+    = f.submit "Aktualisieren", :class => "btn btn-primary"

@@ -1,34 +1,5 @@
 = form_for @user do |f|
   %fieldset
-    %legend Registrierung
-    - if @user.errors.any?
-      %div.alert
-        %strong
-          = @user.errors.count
-          Fehler aufgetreten
-        %br
-        %button.close{"type" => "button", "data-dismiss"=>"alert"} &times;
-        - @user.errors.full_messages.each do |msg|
-          =msg
-          %br
-    = f.label :login
-    = f.text_field :login
-    = f.label :email
-    = f.text_field :email
-    %label Name
-    %div.controls.controls-row
-      = f.text_field :first_name, :placeholder => "Vorname"
-      = f.text_field :second_name, :placeholder => "Nachname"
-    %label.checkbox
-      männlich?
-      = f.check_box :male
-    = f.label :Geburtstag
-    = f.date_select :birthday, :start_year => 1950, :end_year => Time.now.year
-    = f.label :Stadt
-    = f.text_field :city
-    %br
-    %div.controls.controls-row
-      = f.label :password
-      = f.password_field :password, :placeholder => "Passwort"
-      = f.password_field :password_confirmation, :placeholder => "Passwort Bestätigung"
+    %legend Registrierung für BoulderEvents.de
+    = render :partial => "form", :object => f
     = f.submit "Abschicken", :class => "btn btn-primary"

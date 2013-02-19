@@ -1,0 +1,31 @@
+
+- if @user.errors.any?
+  %div.alert
+    %strong
+      = @user.errors.count
+      Fehler aufgetreten
+    %br
+    %button.close{"type" => "button", "data-dismiss"=>"alert"} &times;
+    - @user.errors.full_messages.each do |msg|
+      =msg
+      %br
+= form.label :login
+= form.text_field :login
+= form.label :email
+= form.text_field :email
+%label Name
+%div.controls.controls-row
+  = form.text_field :first_name, :placeholder => "Vorname"
+  = form.text_field :second_name, :placeholder => "Nachname"
+%label.checkbox
+  männlich?
+  = form.check_box :male
+= form.label :Geburtstag
+= form.date_select :birthday, :start_year => 1950, :end_year => Time.now.year
+= form.label :Stadt
+= form.text_field :city
+%br
+%div.controls.controls-row
+  = form.label :password
+  = form.password_field :password, :placeholder => "Passwort"
+  = form.password_field :password_confirmation, :placeholder => "Passwort Bestätigung"
