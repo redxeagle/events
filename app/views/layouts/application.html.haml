@@ -36,11 +36,20 @@
           %a.brand{:href => "#"} Boulder Events
           .container-fluid.nav-collapse
             %ul.nav
+              %li
+                =link_to root_path do
+                  %i.icon-home.icon-white Home
               - if current_user
-                %li= link_to "ausloggen", user_sessions_url, :method => :delete
+                %li
+                  = link_to user_sessions_url, :method => :delete do
+                    %i.icon-off ausloggen
               - else
-                %li= link_to "Login", new_user_sessions_path
-                %li= link_to "Registrierung", new_users_path
+                %li
+                  = link_to new_user_sessions_path do
+                    %i.icon-lock.icon-white Login
+                %li
+                  = link_to new_users_path do
+                    %i.icon-user.icon-white Registrierung
           / /.nav-collapse
     .container-fluid
       .row-fluid
