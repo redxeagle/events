@@ -1,0 +1,16 @@
+= form_for @user_session, :html => {:class => "form-inline"} do |f|
+  %fieldset
+    %legend Login
+    - if @user_session.errors.any?
+      %div.alert
+        %strong
+          = @user_session.errors.count
+          Fehler aufgetreten
+        %br
+        %button.close{"type" => "button", "data-dismiss"=>"alert"} &times;
+        - @user_session.errors.full_messages.each do |msg|
+          =msg
+          %br
+    = f.text_field :login, :placeholder => "Benutzername"
+    = f.password_field :password, :placeholder => "Passwort"
+    = f.submit "Login", :class => 'btn btn-primary'
