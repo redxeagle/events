@@ -40,3 +40,14 @@
      -moz-border-radius: 4px 0 4px 0;
           border-radius: 4px 0 4px 0;
 }
+
+.field_with_errors {
+    display: inline;
+}
+
+.field_with_errors input[type="text"] {
+    border: 1px solid red;
+}
+.field_with_errors input[type="password"] {
+    border: 1px solid red;
+}
