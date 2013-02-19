@@ -16,7 +16,7 @@ de:
       login_not_found: wurde nicht gefunden.
       login_invalid: nicht valide. Bitte geben sie nur Buchstaben, Nummern, Leerzeichen, und .-_@ an.
       consecutive_failed_logins_limit_exceeded: Consecutive failed logins limit exceeded, account is disabled.
-      email_invalid: should look like an email address.
+      email_invalid: sollte wie eine E-Mail Adresse aussehen.
       password_blank: darf nicht leer sein.
       password_invalid: ist nicht richtig.
       not_active: Your account is not active
