@@ -9,3 +9,28 @@ de:
         city: "Wohnort"
         email: "E-Mail"
         password: "Passwort"
+        password_confirmation: Passwort Bestätigung
+  authlogic:
+    error_messages:
+      login_blank: ist leer. Bitte geben sie einen Login an.
+      login_not_found: wurde nicht gefunden.
+      login_invalid: nicht valide. Bitte geben sie nur Buchstaben, Nummern, Leerzeichen, und .-_@ an.
+      consecutive_failed_logins_limit_exceeded: Consecutive failed logins limit exceeded, account is disabled.
+      email_invalid: should look like an email address.
+      password_blank: darf nicht leer sein.
+      password_invalid: ist nicht richtig.
+      not_active: Your account is not active
+      not_confirmed: Your account is not confirmed
+      not_approved: Your account is not approved
+      no_authentication_details: Du musst deine Anmeldedaten eingeben.
+      general_credentials_error: Login/Password combination is not valid
+      password_confirmation: Passwort Bestätigung
+    models:
+      user_session: UserSession
+    attributes:
+      user_session:
+        login: Login
+        email: E-Mail
+        password: Password
+        remember_me: remember me
+        password_confirmation: Passwort Bestätigung
