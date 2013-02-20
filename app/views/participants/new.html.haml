@@ -29,7 +29,7 @@
 
 = form_for @participant, :html=> {:class => "bs-docs-example", :title => "selbst anmelden"} do |f|
   %fieldset
-    - if @participant.errors.any?
+    - if @participant.errors.any? && @participant.self_registration?
       %div.alert
         %strong
           = @participant.errors.count
@@ -50,7 +50,7 @@
 
 = form_for @participant, :html=> {:class => "bs-docs-example", :title => "weitere Person"} do |f|
   %fieldset
-    - if @participant.errors.any?
+    - if @participant.errors.any?  && !@participant.self_registration?
       %div.alert
         %strong
           = @participant.errors.count

@@ -1,5 +1,6 @@
 class ParticipantsController < ApplicationController
   before_filter :require_user, :only => [:new, :create, :show]
+
   def show
     csv_string = Participant.to_csv
     respond_to do |format|
@@ -22,7 +23,7 @@ class ParticipantsController < ApplicationController
     @events = Event.where(:registration => true)
     if @participant.save
       flash[:notice] = "angemeldet!"
-      redirect_back_or_default root_url
+      redirect_back_or_default new_participants_path
     else
       render :action => :new
     end

@@ -5,7 +5,7 @@ class AddParticipantsInformation < ActiveRecord::Migration
     add_column :participants, :city, :string
     add_column :participants, :birthday, :date
     add_column :participants, :male, :boolean
-    add_column :participants, :self_registration, :boolean
+    add_column :participants, :self_registration, :boolean, :default => false
   end
 
   def down

@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20130220180940) do
     t.string   "city"
     t.date     "birthday"
     t.boolean  "male"
-    t.boolean  "self_registration"
+    t.boolean  "self_registration", :default => false
   end
 
   create_table "roles", :force => true do |t|

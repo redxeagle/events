@@ -12,6 +12,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/participants_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/participants_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/participant.rb" afterPath="$PROJECT_DIR$/app/models/participant.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/participants/new.html.haml" afterPath="$PROJECT_DIR$/app/views/participants/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130220180940_add_participants_information.rb" afterPath="$PROJECT_DIR$/db/migrate/20130220180940_add_participants_information.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="events2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,64 +39,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="participants_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/participants_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="23" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="participant.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/participant.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="120" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.haml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="new.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/participants/new.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="47" selection-start="84" selection-end="84" vertical-scroll-proportion="0.03195489">
+            <state line="52" column="36" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/events/show.html.haml">
+      <file leaf-file-name="participants_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/participants_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="30" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/events/index.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="420" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/participants/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.10/lib/action_view/helpers/form_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1298" column="10" selection-start="55786" selection-end="55786" vertical-scroll-proportion="0.0">
+            <state line="25" column="52" selection-start="726" selection-end="726" vertical-scroll-proportion="0.5380435">
               <folding />
             </state>
           </provider>
@@ -126,13 +83,13 @@
         <option value="$PROJECT_DIR$/app/controllers/events_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.haml" />
-        <option value="$PROJECT_DIR$/db/migrate/20130220180940_add_participants_information.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/views/events/show.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/admin/events_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/participants_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20130220180940_add_participants_information.rb" />
         <option value="$PROJECT_DIR$/app/models/participant.rb" />
         <option value="$PROJECT_DIR$/app/views/participants/new.html.haml" />
+        <option value="$PROJECT_DIR$/app/controllers/participants_controller.rb" />
       </list>
     </option>
   </component>
@@ -250,24 +207,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="participants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -811,11 +750,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/participants_controller.rb</url>
-          <line>33</line>
+          <line>34</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/participants_controller.rb</url>
-          <line>35</line>
+          <line>36</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/views/participants/new.html.haml</url>
@@ -833,62 +772,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/news_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="471" selection-end="683" vertical-scroll-proportion="0.8304598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/events_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="82" selection-start="445" selection-end="445" vertical-scroll-proportion="0.13109756">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.10/lib/action_controller/metal/implicit_render.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.10/lib/active_support/callbacks.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="434" column="0" selection-start="14750" selection-end="14750" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.10/lib/action_controller/metal/instrumentation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-3.1.10/lib/active_support/notifications/instrumenter.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.10/lib/abstract_controller/rendering.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.1.10/lib/action_controller/metal.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="0" selection-start="5504" selection-end="5504" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Ruby187/lib/ruby/gems/1.8/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="153" column="0" selection-start="4550" selection-end="4550" vertical-scroll-proportion="0.31983805">
@@ -903,23 +786,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/participant.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/participants/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="120" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/participants_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="23" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/events/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="30" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -931,7 +800,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/participants/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/events/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="30" selection-start="128" selection-end="128" vertical-scroll-proportion="0.061594203">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130216142834_change_user_gender_default.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="63" selection-start="108" selection-end="125" vertical-scroll-proportion="0.061594203">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130216153921_create_roles.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130216085222_add_participants.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130210173537_user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="59" selection-start="263" selection-end="278" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130214185229_add_user_activate.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="83" selection-start="198" selection-end="270" vertical-scroll-proportion="0.1539855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/participant.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="14" selection-start="630" selection-end="630" vertical-scroll-proportion="0.41001856">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130220180940_add_participants_information.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="45" selection-start="308" selection-end="308" vertical-scroll-proportion="0.18478261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/participants/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -940,7 +872,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/participants/new.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="47" selection-start="84" selection-end="84" vertical-scroll-proportion="0.03195489">
+        <state line="52" column="36" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/participants_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="52" selection-start="726" selection-end="726" vertical-scroll-proportion="0.5380435">
           <folding />
         </state>
       </provider>
