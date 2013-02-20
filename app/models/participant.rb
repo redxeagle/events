@@ -5,6 +5,14 @@ class Participant < ActiveRecord::Base
   belongs_to :event
   validates_uniqueness_of :user_id, :scope => :event_id, :if => Proc.new {|participant| participant.self_registration?}, :message => "Sie sind bereits für dieses Event angemeldet"
   validates :first_name, :second_name, :city, :birthday, :presence => true, :if => Proc.new {|participant| !participant.self_registration? }
+  validate :maximum_participants_not_reached
+
+  def maximum_participants_not_reached
+    if event.participants.count >= event.maximum_participant
+      errors.add("Maximale", " Teilnehmer erreicht.")
+    end
+  end
+
   def csv_line
     return [self.id.to_s,
             self.user.second_name,
