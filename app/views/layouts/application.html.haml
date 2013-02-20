@@ -39,6 +39,9 @@
               %li
                 =link_to root_path do
                   %i.icon-home.icon-white Home
+              %li
+                =link_to events_path do
+                  %i.icon-list.icon-white Events
               - if current_user
                 %li
                   = link_to user_sessions_url, :method => :delete do

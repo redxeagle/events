@@ -1,5 +1,9 @@
 Events2::Application.routes.draw do
 
+  get "events/index"
+
+  get "events/show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -53,6 +57,9 @@ Events2::Application.routes.draw do
   resource :user_sessions
   resource :users
   resource :participants
+  match '/events' => 'events#index', :as => :events
+  match '/events/:id' => 'events#show', :as => :event
+
   match '/activate/:activation_code' => 'users#activate', :as => :activate
   #root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
   root :to => 'home#index'
