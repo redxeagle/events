@@ -22,11 +22,22 @@ class Admin::EventsController < ApplicationController
   end
 
   def edit
+    @event = Event.find(params[:id])
 
   end
 
   def index
     @events = Event.all
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    if @event.update_attributes(params[:event])
+      flash[:notice] = "Event updated!"
+      redirect_to root_url
+    else
+      render :action => :edit
+    end
   end
 
 end

@@ -1,6 +1,6 @@
 %div.bs-docs-example{:title => @event.name}
   - if current_user && current_user.has_role?(:admin)
-    = link_to edit_admin_news_path(:id => news.id) do
+    = link_to edit_admin_event_path(:id => @event.id) do
       %i.icon-pencil
   %h6= @event.start_time
   %h6= @event.registration_start

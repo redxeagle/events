@@ -29,6 +29,7 @@ class ParticipantsController < ApplicationController
 
   def new
     @participant = Participant.new
+    @user = current_user
     now = Time.now.utc.to_date
     @events = Event.where(:registration => true).
                     where({:registration_start => now,  :registration_end => now})
