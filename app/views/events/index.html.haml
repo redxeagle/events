@@ -1,13 +1,16 @@
 %table.table.table-striped
   %thead
     %tr
+      %th Details
       %th Name
-      %th Datum
+      %th Startzeit
+      %th Anmeldestart
+      %th Kletterhalle
   %tbody
     - @events.each do |event|
       %tr
+        %td Link zum Detailpage
         %td= event.name
         %td= event.start_time
-    %tr
-      %td Dummy1
-      %td Dummy2
+        %td= event.registration_start
+        %td= event.hall != nil ? event.hall.name : ""

@@ -1,4 +1,4 @@
 class Event < ActiveRecord::Base
-  has_one :hall
+  belongs_to :hall
   has_many :participants
 end

@@ -6,12 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c15621ed-5185-44bc-8b68-379b0eb6ff10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/events/index.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/event.rb" afterPath="$PROJECT_DIR$/app/models/event.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/index.html.haml" afterPath="$PROJECT_DIR$/app/views/events/index.html.haml" />
     </list>
     <ignored path="events2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +39,16 @@
       <file leaf-file-name="index.html.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/events/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="29" selection-start="177" selection-end="177" vertical-scroll-proportion="0.27517986">
+            <state line="15" column="53" selection-start="369" selection-end="369" vertical-scroll-proportion="0.4586331">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/event.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="12" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,7 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/admin/events/show.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/admin/events_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/events/index.html.haml" />
         <option value="$PROJECT_DIR$/app/views/users/edit.html.haml" />
@@ -87,6 +94,7 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/events_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/event.rb" />
         <option value="$PROJECT_DIR$/app/views/events/index.html.haml" />
       </list>
     </option>
@@ -130,22 +138,22 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events2" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="RailsProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events2" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -227,6 +235,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -666,11 +692,11 @@
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28084415" sideWeight="0.6724537" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28084415" sideWeight="0.6724537" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3068182" sideWeight="0.6724537" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3125" sideWeight="0.6724537" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39930555" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -774,89 +800,62 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/models/user_session.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="43" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="43" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://C:/Ruby187/lib/ruby/gems/1.8/gems/authlogic-3.2.0/lib/authlogic/session/base.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="20" selection-start="635" selection-end="635" vertical-scroll-proportion="0.46961325">
-          <folding />
-        </state>
+        <state line="18" column="20" selection-start="635" selection-end="635" vertical-scroll-proportion="0.46961325" />
       </provider>
     </entry>
     <entry file="file://C:/Ruby187/lib/ruby/gems/1.8/gems/authlogic-3.2.0/lib/authlogic/session/password.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="231" column="50" selection-start="10349" selection-end="10349" vertical-scroll-proportion="2.1270719">
-          <folding />
-        </state>
+        <state line="231" column="50" selection-start="10349" selection-end="10349" vertical-scroll-proportion="2.1270719" />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/rubystubs18/kernel.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="751" column="8" selection-start="27793" selection-end="27793" vertical-scroll-proportion="0.3327338">
-          <folding />
-        </state>
+        <state line="751" column="8" selection-start="27793" selection-end="27793" vertical-scroll-proportion="0.3327338" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/de.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="26" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="19" column="26" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="48" selection-start="1566" selection-end="1566" vertical-scroll-proportion="0.51978415">
-          <folding>
-            <marker date="1361317938788" expanded="true" signature="-1:-1" placeholder="#..." />
-            <marker date="1361317938788" expanded="true" signature="-1:-1" placeholder="#..." />
-          </folding>
-        </state>
+        <state line="61" column="48" selection-start="1566" selection-end="1566" vertical-scroll-proportion="0.51978415" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="98" selection-start="2554" selection-end="2554" vertical-scroll-proportion="1.1270719">
-          <folding />
-        </state>
+        <state line="51" column="98" selection-start="2554" selection-end="2554" vertical-scroll-proportion="1.1270719" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="13" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="13" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/new.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="45" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="45" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="48" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="48" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/participants/new.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/news/new.html.haml">
@@ -866,16 +865,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/event.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
+        <state line="1" column="12" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="19" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/events/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="29" selection-start="177" selection-end="177" vertical-scroll-proportion="0.27517986">
+        <state line="15" column="53" selection-start="369" selection-end="369" vertical-scroll-proportion="0.4586331">
           <folding />
         </state>
       </provider>
