@@ -9,7 +9,9 @@
   %tbody
     - @events.each do |event|
       %tr
-        %td Link zum Detailpage
+        %td
+          = link_to event_path(event) do
+            %i.icon-eye-open
         %td= event.name
         %td= event.start_time
         %td= event.registration_start
