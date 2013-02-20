@@ -13,6 +13,6 @@
           = link_to event_path(event) do
             %i.icon-eye-open
         %td= event.name
-        %td= event.start_time
-        %td= event.registration_start
+        %td= event.start_time.strftime("%d. %m. %Y - %H:%M Uhr")
+        %td= event.registration_start.strftime("%d. %m. %Y")
         %td= event.hall != nil ? event.hall.name : ""
