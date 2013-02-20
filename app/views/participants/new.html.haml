@@ -1,7 +1,31 @@
 - unless (@user.participants.empty?)
-  %div.bs-docs-example{:title => "Angemeldet bei"}
-    - @user.participants.each do |participant|
-      %h6= participant.event.name
+  %div.bs-docs-example{:title => "Anmeldungen von dir"}
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Event
+          %th Vorname
+          %th Nachname
+          %th Stadt
+          %th Geburtstag
+          %th Power/Relax
+      %tbody
+        - @user.participants.each do |participant|
+          %tr
+            %td= participant.event.name
+            -if participant.self_registration
+              %td= participant.user.first_name
+              %td= participant.user.second_name
+              %td= participant.user.city
+              %td= participant.user.birthday
+            -else
+              %td= participant.first_name
+              %td= participant.second_name
+              %td= participant.city
+              %td= participant.birthday
+            %td= participant.power? ? "Power" : "Relax"
+
+
 
 = form_for @participant, :html=> {:class => "bs-docs-example", :title => "selbst anmelden"} do |f|
   %fieldset
@@ -19,6 +43,7 @@
       Power?
       = f.check_box :power
     = f.label :Event
+    = f.hidden_field :self_registration, :value => 1
     = f.select :event_id, @events.map{|event| [event.name, event.id]}
     %br
     = f.submit "Anmelden", :class => "btn btn-primary"
@@ -46,6 +71,7 @@
     = f.date_select :birthday, :start_year => 1950, :end_year => Time.now.year
     = f.label :Stadt
     = f.text_field :city
+    = f.hidden_field :self_registration, :value => 0
     %label.checkbox
       Power?
       = f.check_box :power

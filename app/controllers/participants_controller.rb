@@ -18,6 +18,7 @@ class ParticipantsController < ApplicationController
   def create
     @participant = Participant.new(params[:participant])
     @participant.user = current_user
+    @user = current_user
     @events = Event.where(:registration => true)
     if @participant.save
       flash[:notice] = "angemeldet!"
@@ -30,9 +31,9 @@ class ParticipantsController < ApplicationController
   def new
     @participant = Participant.new
     @user = current_user
-    now = Time.now.utc.to_date
+    now = Time.now.utc
     @events = Event.where(:registration => true).
-                    where({:registration_start => now,  :registration_end => now})
+                    where("registration_start <= ? AND  registration_end >= ?", now, now)
   end
 
   def index
