@@ -35,6 +35,8 @@ class ParticipantsController < ApplicationController
     now = Time.now.utc
     @events = Event.where(:registration => true).
                     where("registration_start <= ? AND  registration_end >= ?", now, now)
+    @events = @events.select { |event| event.participants.count < event.maximum_participant}
+
   end
 
   def index
