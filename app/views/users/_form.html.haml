@@ -20,9 +20,9 @@
 = form.label "Geschlecht"
 - gender = [["weiblich", "0"],["männlich", "1"]]
 = form.select :male, options_for_select(gender, :selected => (@user.male? ? gender[1] : gender[0]))
-= form.label :Geburtstag
+= form.label "Geburtstag"
 = form.date_select :birthday, :start_year => 1950, :end_year => Time.now.year
-= form.label :Stadt
+= form.label "Stadt"
 = form.text_field :city
 %br
 %div.controls.controls-row
