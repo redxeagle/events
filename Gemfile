@@ -5,9 +5,6 @@ gem 'rails', '3.1.10'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-group :development do
-  gem 'sqlite3'
-end
 
 gem 'mysql'
 gem 'json'
@@ -16,6 +13,7 @@ gem 'twitter-bootstrap-rails'
 gem 'authlogic'
 gem 'fastercsv'
 gem "acl9"
+gem 'rails-i18n'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
