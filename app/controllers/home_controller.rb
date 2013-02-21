@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @news = News.all
+    @news = News.all(:order => 'id DESC')
   end
 
   def impressum

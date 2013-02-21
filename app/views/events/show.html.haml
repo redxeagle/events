@@ -2,7 +2,7 @@
   - if current_user && current_user.has_role?(:admin)
     = link_to edit_admin_event_path(:id => @event.id) do
       %i.icon-pencil
-  %h6= @event.start_time
-  %h6= @event.registration_start
-  %p= @event.description
+  %h6= "Starttermin: " + @event.start_time.strftime("%d. %m. %Y - %H:%M Uhr")
+  %h6= "Anmeldungsbeginn: "+ @event.registration_start.strftime("%d. %m. %Y")
+  %p= raw @event.description
 
