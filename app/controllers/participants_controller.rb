@@ -32,7 +32,7 @@ class ParticipantsController < ApplicationController
   def new
     @participant = Participant.new
     @user = current_user
-    now = Time.now.utc
+    now = Time.now.utc + 1.hour
     @events = Event.where(:registration => true).
                     where("registration_start <= ? AND  registration_end >= ?", now, now)
     @events = @events.select { |event| event.participants.count < event.maximum_participant}
