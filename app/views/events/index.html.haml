@@ -6,6 +6,8 @@
       %th Startzeit
       %th Anmeldestart
       %th Kletterhalle
+      %th Teilnehmer maximal
+      %th schon angemeldet
   %tbody
     - @events.each do |event|
       %tr
@@ -16,3 +18,5 @@
         %td= event.start_time.strftime("%d. %m. %Y - %H:%M Uhr")
         %td= event.registration_start.strftime("%d. %m. %Y")
         %td= event.hall != nil ? event.hall.name : ""
+        %td= event.maximum_participant
+        %td= event.participants.count
