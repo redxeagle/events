@@ -10,6 +10,10 @@ de:
         email: "E-Mail"
         password: "Passwort"
         password_confirmation: Passwort Bestätigung
+      participant:
+        first_name: "Vorname"
+        second_name: "Nachname"
+        city: "Wohnort"
   authlogic:
     error_messages:
       login_blank: ist leer. Bitte geben sie einen Login an.

@@ -23,7 +23,7 @@ class ParticipantsController < ApplicationController
     @events = Event.where(:registration => true)
     if @participant.save
       flash[:notice] = "angemeldet!"
-      redirect_back_or_default new_participants_path
+      redirect_back_or_default new_participant_path
     else
       render :action => :new
     end
@@ -40,6 +40,13 @@ class ParticipantsController < ApplicationController
   end
 
   def index
+  end
+
+  def destroy
+    participant = Participant.find(params[:id])
+    participant.destroy
+    flash[:notice] = "Abmeldung war erfolgreich"
+    redirect_back_or_default new_participant_path
   end
 
 end

@@ -12,7 +12,10 @@
       %tbody
         - @user.participants.each do |participant|
           %tr
-            %td= participant.event.name
+            %td
+              =link_to participant_path(participant), :method => :delete, :confirm => "Möchtest du dich wirklich abmelden?" do
+                %i.icon-remove
+              = participant.event.name
             -if participant.self_registration
               %td= participant.user.first_name
               %td= participant.user.second_name
@@ -24,6 +27,8 @@
               %td= participant.city
               %td= participant.birthday
             %td= participant.power? ? "Power" : "Relax"
+            %td
+
 
 
 - if @events.any?

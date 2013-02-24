@@ -51,7 +51,7 @@ Events2::Application.routes.draw do
   # just remember to delete public/index.html.
   resource :user_sessions
   resource :users
-  resource :participants
+  resources :participants
   match '/events' => 'events#index', :as => :events
   match '/events/:id' => 'events#show', :as => :event
 
