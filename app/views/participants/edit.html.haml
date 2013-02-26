@@ -1,0 +1,49 @@
+- if @events.any?
+  - if @participant.self_registration?
+    = form_for @participant, :html=> {:class => "bs-docs-example", :title => "selbst anmelden"} do |f|
+      %fieldset
+        - if @participant.errors.any? && @participant.self_registration?
+          %div.alert
+            %strong
+              = @participant.errors.count
+              Fehler aufgetreten
+            %br
+            %button.close{"type" => "button", "data-dismiss"=>"alert"} &times;
+            - @participant.errors.full_messages.each do |msg|
+              =msg
+              %br
+        %label.checkbox
+          Power?
+          = f.check_box :power
+        %br
+        = f.submit "Aktualisieren", :class => "btn btn-primary"
+  - else
+    = form_for @participant, :html=> {:class => "bs-docs-example", :title => "weitere Person"} do |f|
+      %fieldset
+        - if @participant.errors.any?  && !@participant.self_registration?
+          %div.alert
+            %strong
+              = @participant.errors.count
+              Fehler aufgetreten
+            %br
+            %button.close{"type" => "button", "data-dismiss"=>"alert"} &times;
+            - @participant.errors.full_messages.each do |msg|
+              =msg
+              %br
+        %label Name
+        %div.controls.controls-row
+          = f.text_field :first_name, :placeholder => "Vorname"
+          = f.text_field :second_name, :placeholder => "Nachname"
+        = f.label "Geschlecht"
+        - gender = [["weiblich", "0"],["männlich", "1"]]
+        = f.select :male, options_for_select(gender, :selected => (@participant.male? ? gender[1] : gender[0]))
+        = f.label :Geburtstag
+        = f.date_select :birthday, :start_year => 1950, :end_year => Time.now.year
+        = f.label :Stadt
+        = f.text_field :city
+        = f.hidden_field :self_registration, :value => 0
+        %label.checkbox
+          Power?
+          = f.check_box :power
+        %br
+        = f.submit "Aktualisieren", :class => "btn btn-primary"

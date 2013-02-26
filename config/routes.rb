@@ -57,6 +57,7 @@ Events2::Application.routes.draw do
 
   match '/activate/:activation_code' => 'users#activate', :as => :activate
   match 'impressum' => 'home#impressum', :as => :imprint
+  match 'changelog' => 'home#changelog', :as => :changelog
 
   #root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
   root :to => 'home#index'

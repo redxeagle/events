@@ -60,6 +60,7 @@
           .well.sidebar-nav
             %ul.nav.nav-list
               %li.nav-header Sidebar
+              %li= link_to "Changelog", changelog_path
               - if current_user
                 - if current_user && current_user.has_role?(:admin)
                   %li= link_to "neues Event", new_admin_event_path

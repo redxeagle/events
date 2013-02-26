@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
 
   def impressum
-
+  end
+  def changelog
   end
 end

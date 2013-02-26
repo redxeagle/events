@@ -14,6 +14,12 @@ class ParticipantsController < ApplicationController
   end
 
   def edit
+    @participant = Participant.find(params[:id])
+    @user = current_user
+    now = Time.now.utc + 1.hour
+    @events = Event.where(:registration => true).
+                    where("registration_start <= ? AND  registration_end >= ?", now, now)
+    @events = @events.select { |event| event.participants.count < event.maximum_participant}
   end
 
   def create
@@ -37,6 +43,16 @@ class ParticipantsController < ApplicationController
                     where("registration_start <= ? AND  registration_end >= ?", now, now)
     @events = @events.select { |event| event.participants.count < event.maximum_participant}
 
+  end
+
+  def update
+    @participant = Participant.find(params[:id])
+    if @participant .update_attributes(params[:participant])
+      flash[:notice] = "Anmeldung aktualisiert!"
+      redirect_to new_participant_path
+    else
+      render :action => :edit
+    end
   end
 
   def index
