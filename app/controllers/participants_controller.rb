@@ -2,15 +2,6 @@ class ParticipantsController < ApplicationController
   before_filter :require_user, :only => [:new, :create, :show]
 
   def show
-    csv_string = Participant.to_csv
-    respond_to do |format|
-      format.html
-      format.csv {
-        send_data csv_string,
-          :type => 'text/csv; charset=iso-8859-1; header=present',
-          :disposition => "attachment; filename=participant.csv"
-      }
-    end
   end
 
   def edit
@@ -56,6 +47,15 @@ class ParticipantsController < ApplicationController
   end
 
   def index
+    csv_string = Participant.to_csv
+    respond_to do |format|
+      format.html
+      format.csv {
+        send_data csv_string,
+          :type => 'text/csv; charset=iso-8859-1; header=present',
+          :disposition => "attachment; filename=participant.csv"
+      }
+    end
   end
 
   def destroy

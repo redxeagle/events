@@ -3,7 +3,7 @@ require 'faster_csv'
 class Participant < ActiveRecord::Base
   belongs_to :user
   belongs_to :event
-  validates_uniqueness_of :user_id, :scope => [:event_id, :self_registration], :if => Proc.new {|participant| participant.self_registration?}, :message => "Sie sind bereits für dieses Event angemeldet"
+  validates_uniqueness_of :user_id, :scope => [:event_id, :self_registration], :if => Proc.new {|participant| participant.self_registration? == true}, :message => "Sie sind bereits für dieses Event angemeldet"
   validates :first_name, :second_name, :city, :birthday, :presence => true, :if => Proc.new {|participant| !participant.self_registration? }
   validate :maximum_participants_not_reached
 
@@ -14,13 +14,23 @@ class Participant < ActiveRecord::Base
   end
 
   def csv_line
-    return [self.id.to_s,
-            self.user.second_name,
-            self.user.first_name,
-            self.user.city,
-            (self.user.male? ? "männlich" : "weiblich"),
-            calculate_age(self.user.birthday).to_s,
-            self.power?.to_s  ]
+    if(self.self_registration?)
+      return [self.id.to_s,
+              self.user.second_name,
+              self.user.first_name,
+              self.user.city,
+              (self.user.male? ? "männlich" : "weiblich"),
+              calculate_age(self.user.birthday).to_s,
+              self.power?.to_s  ]
+    else
+      return [self.id.to_s,
+              self.second_name,
+              self.first_name,
+              self.city,
+              (self.male? ? "männlich" : "weiblich"),
+              calculate_age(self.birthday).to_s,
+              self.power?.to_s]
+    end
   end
 
   def self.to_csv
