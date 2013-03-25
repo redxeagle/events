@@ -43,6 +43,9 @@ Events2::Application.routes.draw do
   namespace :admin do
     resources :events
     resources :news
+    resources :assets do
+      put :file_upload
+    end
   end
 
   resource :account, :controller => "users"

@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130221201940) do
+ActiveRecord::Schema.define(:version => 20130325184514) do
+
+  create_table "assets", :force => true do |t|
+    t.integer  "event_id"
+    t.string   "filename"
+    t.string   "description"
+    t.string   "file_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", :force => true do |t|
     t.integer  "hall_id"

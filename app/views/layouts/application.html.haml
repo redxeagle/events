@@ -65,6 +65,7 @@
                 - if current_user && current_user.has_role?(:admin)
                   %li= link_to "neues Event", new_admin_event_path
                   %li= link_to "neue News", new_admin_news_path
+                  %li= link_to "neue Asset", new_admin_asset_path
                 %li= link_to "Anmelden", new_participant_path
                 %li= link_to "Benutzer Profil", account_path
           = link_to image_tag("tapir_Logo_url.jpg"), "http://www.tapir-store.de/"

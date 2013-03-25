@@ -5,4 +5,10 @@
   %h6= "Starttermin: " + @event.start_time.strftime("%d. %m. %Y - %H:%M Uhr")
   %h6= "Anmeldungsbeginn: "+ @event.registration_start.strftime("%d. %m. %Y")
   %p= raw @event.description
+  %ul#filelinks
+    - @event.assets.each do |asset|
+      %li= link_to asset.file_text,
+        "/assets/#{asset.filename}",
+        "data-toggle" => "tooltip",
+        :title=> asset.description
 
